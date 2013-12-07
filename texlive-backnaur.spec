@@ -6,7 +6,7 @@
 # catalog-version 0.60.d
 Name:		texlive-backnaur
 Version:	0.60.d
-Release:	1
+Release:	2
 Summary:	Typeset Backus Naur Form definitions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/backnaur
