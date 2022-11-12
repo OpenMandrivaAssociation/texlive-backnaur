@@ -1,19 +1,13 @@
-# revision 28513
-# category Package
-# catalog-ctan /macros/latex/contrib/backnaur
-# catalog-date 2012-12-12 18:40:20 +0100
-# catalog-license lppl1.3
-# catalog-version 0.60.d
 Name:		texlive-backnaur
-Version:	2.0
+Version:	54080
 Release:	1
 Summary:	Typeset Backus Naur Form definitions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/backnaur
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/backnaur.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/backnaur.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/backnaur.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/backnaur.r54080.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/backnaur.doc.r54080.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/backnaur.source.r54080.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ creates aligned lists of productions, with numbers if required.
 It can also print in-line BNF expressions using math mode.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -43,7 +37,8 @@ It can also print in-line BNF expressions using math mode.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
