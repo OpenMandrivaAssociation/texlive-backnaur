@@ -1,6 +1,6 @@
 Name:		texlive-backnaur
 Version:	54080
-Release:	1
+Release:	2
 Summary:	Typeset Backus Naur Form definitions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/backnaur
